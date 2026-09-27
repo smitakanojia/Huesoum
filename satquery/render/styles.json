@@ -1,0 +1,14 @@
+{
+  "base": { "render": "image" },
+  "water": { "color": "#5B95B3", "render": "outline", "width": 2 },
+  "water_loss": { "color": "#B85A45", "render": "fill", "opacity": 0.55 },
+  "change": { "color": "#C99A4F", "render": "fill", "opacity": 0.5 },
+  "region": { "color": "#9FB0A6", "render": "outline", "width": 1.5, "dash": [4, 3] },
+  "buildings": { "color": "#E7E2D5", "render": "boxes", "width": 1 },
+  "buildings_new": { "color": "#D9A441", "render": "boxes", "width": 2 },
+  "detections": { "color": "#D9A441", "render": "boxes", "width": 2 },
+  "builtup": { "color": "#B9843B", "render": "fill", "opacity": 0.45 },
+  "radar_only": { "color": "#8D7FA0", "render": "fill", "opacity": 0.38, "hatch": true },
+  "cloud": { "color": "#C7C2B8", "render": "fill", "opacity": 0.42 },
+  "ndvi": { "color": "#5E9179", "render": "fill", "opacity": 0.35 }
+}

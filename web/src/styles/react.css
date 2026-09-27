@@ -1,0 +1,154 @@
+/* Supplemental styles for a handful of classes introduced by the React port that
+   are not in the ported design system (app.css). Kept minimal and on-palette. */
+
+.logo-wrap,
+.ic-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+.logo-wrap svg,
+.ic-wrap svg {
+  display: block;
+}
+
+/* landing nav buttons styled like the original anchor links */
+.nav-links .link-nav {
+  background: none;
+  border: 0;
+  padding: 6px 2px;
+  cursor: pointer;
+  color: var(--ink-soft);
+  font: inherit;
+  font-weight: 500;
+}
+.nav-links .link-nav:hover {
+  color: var(--navy);
+}
+
+/* pipeline extras */
+.mod-tags,
+.tasktags,
+.fuse-streams {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.tool-pick {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 220px;
+}
+.chip.big {
+  font-size: 0.95rem;
+  padding: 6px 12px;
+}
+.chip.off {
+  opacity: 0.5;
+}
+.fuse-streams b {
+  width: 100%;
+  color: var(--forest);
+  margin-top: 6px;
+}
+.scan {
+  position: absolute;
+  inset: auto 8% 12% 8%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--forest), transparent);
+  opacity: 0.85;
+  animation: scanmove 1.6s ease-in-out infinite;
+}
+.scan.run {
+  height: 40%;
+  inset: 8% 8% auto 8%;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  background: rgba(53, 107, 91, 0.12);
+  animation: scanbox 2s ease-in-out infinite;
+}
+@keyframes scanmove {
+  0%, 100% { transform: translateY(-40px); }
+  50% { transform: translateY(40px); }
+}
+@keyframes scanbox {
+  0%, 100% { transform: translateY(-10%); }
+  50% { transform: translateY(120%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scan, .scan.run { animation: none; }
+}
+
+/* continue-the-same-chat thread */
+.chat {
+  margin-top: 34px;
+  border-top: 1px solid var(--line, var(--rule));
+  padding-top: 22px;
+}
+.chat-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+.chat-thread {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.chat-turn {
+  border: 1px solid var(--line, var(--rule));
+  border-radius: 6px;
+  padding: 12px 14px;
+  background: var(--surface-2, #f4f5f6);
+}
+.chat-q {
+  font-weight: 600;
+  margin: 0 0 6px;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+.chat-badge {
+  font: 600 0.68rem var(--fb);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--blue);
+  border: 1px solid var(--rule, #ddd);
+  border-radius: 3px;
+  padding: 1px 6px;
+}
+.chat-a {
+  margin: 0;
+  color: var(--ink-soft);
+}
+.chat-input {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+.chat-input textarea {
+  flex: 1;
+}
+
+/* map frame aspect handling */
+.map-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line, var(--rule));
+  border-radius: 6px;
+}
+.map-frame .mv-host {
+  position: absolute;
+  inset: 0;
+}
+.maplibregl-map {
+  font: inherit;
+}

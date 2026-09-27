@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* app.css (the ported institutional design system) is imported from main.tsx
+   after this file so it always wins. Tailwind preflight is disabled in
+   tailwind.config.js so it cannot reset the ported styles. */
+#root { min-height: 100vh; }

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+.env
+.env.*.local
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts

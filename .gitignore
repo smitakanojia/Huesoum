@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+runs/
+# Node (web app has its own .gitignore too)
+node_modules/
+dist/
+# OS
+.DS_Store

@@ -1,0 +1,10 @@
+{
+  "note": "Curated demonstration scenes (Master F3.7). The web app computes these synthetically in-browser for the offline demo; the server returns the same set from /api/examples in live mode. Everything here is SYNTHETIC and labelled as such in the UI.",
+  "examples": [
+    { "example_id": "synthetic-lake", "title": "Encroachment on the southern lake shore", "story": "A", "question": "Has anything been built on the southern lake shore since last year?", "description": "Before / after optical pair. Synthetic fixture.", "input_mode": "geotiff", "kind": "bi-temporal", "domain": "enc" },
+    { "example_id": "synthetic-conflict", "title": "Conflict flag: model and detector disagree", "story": "A", "question": "Has anything been built on the southern lake shore since last year?", "description": "Same pair, but the stored language-model text says 'no change'. Synthetic.", "input_mode": "geotiff", "kind": "bi-temporal", "domain": "enc" },
+    { "example_id": "synthetic-cloud-sar", "title": "Cloud over the optical view: switch to radar", "story": "B", "question": "Use both images to identify built-up and water-covered areas.", "description": "Cloudy optical + SAR pair. Synthetic fixture.", "input_mode": "geotiff", "kind": "cross-modal", "domain": "disaster" },
+    { "example_id": "synthetic-landcover", "title": "Main land cover of one image", "story": "C", "question": "What is the main land cover in this image?", "description": "Single image. Synthetic fixture.", "input_mode": "geotiff", "kind": "single", "domain": "agri" },
+    { "example_id": "synthetic-count", "title": "Count the buildings", "story": "D", "question": "How many buildings are visible in this image?", "description": "Single image, detector count. Synthetic fixture.", "input_mode": "geotiff", "kind": "single", "domain": "infra" }
+  ]
+}
